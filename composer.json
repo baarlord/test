@@ -1,0 +1,29 @@
+{
+  "name": "needleo/test",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "needleo"
+    }
+  ],
+  "require": {
+    "phpunit/phpunit": "9.5.11"
+  },
+  "config": {
+    "vendor-dir": "vendor"
+  },
+  "extra": {
+    "merge-plugin": {
+      "require": [
+        "packages/backend/bitrix/composer-bx.json"
+      ]
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "needleo\\test\\": "packages/backend/local/modules/needleo.test/lib"
+    }
+  }
+}
